@@ -15,9 +15,9 @@ I tried to follow the advices given on the sharp website (links see below) and t
 
 ### Additions for sharp
 
-- `yarn add sharp --ignore-engines`
+- `yarn add sharp --ignore-engines` (`--ignore-engines` is recommended for yarn v1)
 
-- Added sharp test to electron-main.js -> Runs in dev mode, but not as packaged build
+- Added sharp test call to electron-main.js -> Runs in dev mode, but not as packaged build.
 - Added unpack options to `quasar.config.js`, both to packager and to builder sections.
 
 ### Infos on Adding sharp
