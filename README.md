@@ -24,10 +24,11 @@ I tried to follow the advices given on the sharp website (links see below) and t
 
 - [sharp and Electron](https://sharp.pixelplumbing.com/install#electron). Where to put these build options? Into `quasar.config.js` under electron - packager?
 - [asarUnpack](https://github.com/lovell/sharp/issues/3985). Does not work with packager?
+- [Configuring Electron](https://quasar.dev/quasar-cli-vite/developing-electron-apps/configuring-electron)
 
 ### Questions
 
-- Do I need to use builder instead of packager?
+- Do I need to use builder instead of packager? I tried it, but it made no difference.
 - Do I need yarn v3 (lovell: "_My current advice to anyone working on multi or cross platform Node.js apps is to use either yarn 3+ or pnpm to manage dependencies via the supportedArchitectures feature._")?
 
 ## General Info
