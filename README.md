@@ -35,6 +35,26 @@ I tried to follow the advices given on the sharp website (links see below) and t
 
 - Using yarn v4: Dev version still builds and runs.
 - Using builder: Produces a packaged version which runs, but sharp is not included (`sharp@npm:0.33.4 must be built because it never has been before or the last one failed`). How can I build it for production?
+- First `yarn install`in a new folder states
+
+```
+➤ YN0000: ┌ Link step
+➤ YN0007: │ electron@npm:31.1.0 must be built because it never has been before or the last one failed
+➤ YN0007: │ sharp@npm:0.33.4 must be built because it never has been before or the last one failed
+➤ YN0007: │ esbuild@npm:0.14.51 must be built because it never has been before or the last one failed
+➤ YN0007: │ esbuild@npm:0.14.54 must be built because it never has been before or the last one failed
+➤ YN0000: └ Completed in 15s 390ms
+```
+
+- Subsequent `quasar build -m electron` states
+
+```
+➤ YN0000: ┌ Link step
+➤ YN0007: │ sharp@npm:0.33.4 must be built because it never has been before or the last one failed
+➤ YN0000: └ Completed in 2s 351ms
+```
+
+`esbuild` and `electron` do not have to be build again, but sharp does?
 
 ## General Info
 
