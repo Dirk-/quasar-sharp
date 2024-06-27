@@ -31,6 +31,11 @@ I tried to follow the advices given on the sharp website (links see below) and t
 - Do I need to use builder instead of packager? I tried it, but it made no difference.
 - Do I need yarn v3 (lovell: "_My current advice to anyone working on multi or cross platform Node.js apps is to use either yarn 3+ or pnpm to manage dependencies via the supportedArchitectures feature._")?
 
+### Progress
+
+- Using yarn v4: Dev version still builds and runs.
+- Using builder: Produces a packaged version which runs, but sharp is not included (`sharp@npm:0.33.4 must be built because it never has been before or the last one failed`). How can I build it for production?
+
 ## General Info
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
