@@ -2,6 +2,7 @@ import { app, BrowserWindow } from "electron";
 import path from "path";
 import os from "os";
 import sharp from "sharp";
+import log from "electron-log/main";
 
 // needed in case process is undefined under Linux
 const platform = process.platform || os.platform();
@@ -25,15 +26,17 @@ function createWindow() {
   });
 
   // SHARP TESTING
+  log.info(sharp.versions);
   sharp(path.resolve(__dirname, "../../src-electron/icons/icon.png"))
     .resize(300, 200)
     .toFile(path.join(os.homedir(), "/iconSharp.png"), function (err) {
       if (err) {
         console.log(err);
+        log.error(err);
       } else {
-        console.log(
-          "Image " + path.join(os.homedir(), "/iconSharp.png") + " created!"
-        );
+        let msg = "Image " + path.join(os.homedir(), "/iconSharp.png") + " created!";
+        console.log(msg);
+        log.info(msg);
       }
     });
 

@@ -73,7 +73,8 @@ module.exports = configure(function (/* ctx */) {
           },
           { server: false },
         ],
-      ],
+      // https://quasar.dev/quasar-cli-vite/handling-vite/#example-rollup-plugin-copy
+    ],
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
@@ -195,6 +196,11 @@ module.exports = configure(function (/* ctx */) {
         // https://sharp.pixelplumbing.com/install#cross-platform
         asar: true,
         asarUnpack: ["**/node_modules/sharp/**/*", "**/node_modules/@img/**/*"],
+        // https://github.com/lovell/sharp/issues/4116 no difference
+        // asarUnpack: "**/node_modules/{sharp,@img}/**/*",
+
+        // buildDependenciesFromSource: true,
+        // nodeGypRebuild: true,
       },
     },
 
