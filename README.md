@@ -5,7 +5,7 @@ A Quasar Project to find out how to include native modules like sharp into an El
 It works when running in dev mode, but not packaged:
 ![Error](error.png)
 
-I tried to follow the advices given on the sharp website (links see below) and tinkered with more on my original project. I just wanted to keep this demo relatively clean.
+I tried to follow the advices given on the sharp website (see links below) and tinkered with more hints on my original project. I just wanted to keep this demo relatively clean.
 
 ## Project Scaffolding
 
@@ -16,8 +16,7 @@ I tried to follow the advices given on the sharp website (links see below) and t
 ### Additions for sharp
 
 - `yarn add sharp --ignore-engines` (`--ignore-engines` is recommended for yarn v1)
-
-- Added sharp test call to electron-main.js -> Runs in dev mode, but not as packaged build.
+- Added sharp test call to `electron-main.js` -> Runs in dev mode, but not as packaged build.
 - Added unpack options to `quasar.config.js`, both to packager and to builder sections.
 
 ### Infos on Adding sharp
@@ -28,8 +27,8 @@ I tried to follow the advices given on the sharp website (links see below) and t
 
 ### Questions
 
-- Do I need to use builder instead of packager? I tried it, but it made no difference.
-- Do I need yarn v3 (lovell: "_My current advice to anyone working on multi or cross platform Node.js apps is to use either yarn 3+ or pnpm to manage dependencies via the supportedArchitectures feature._")?
+- Do I need to use builder instead of packager? `asarUnpack` seems not to be available in packager.
+- Do I need yarn v3 (lovell: "_My current advice to anyone working on multi or cross platform Node.js apps is to use either yarn 3+ or pnpm to manage dependencies via the supportedArchitectures feature._")? Seems so.
 
 ### Progress
 
