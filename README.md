@@ -56,7 +56,7 @@ I tried to follow the advices given on the sharp website (see links below) and t
 `esbuild` and `electron` do not have to be build again, but sharp does?
 
 - Tried on Windows 10, same result as on macOS.
-- Added @electron/rebuild and issued `./node_modules/.bin/electron-rebuild`, immediately results in `✔ Rebuild Complete`. Subsequent `quasar build -m electron` showed same results (sharp build took longer, but nothing else changed).
+- Added @electron/rebuild (see [Native Mode Modules](https://www.electronjs.org/docs/latest/tutorial/using-native-node-modules/)) and issued `./node_modules/.bin/electron-rebuild`, immediately results in `✔ Rebuild Complete`. Subsequent `quasar build -m electron` showed same results (sharp build took longer, but nothing else changed).
 
 ## General Info
 
