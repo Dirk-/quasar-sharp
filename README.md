@@ -13,7 +13,7 @@ I tried to follow the advices given on the sharp website (see links below) and t
 - Accept all defaults (Quasar CLI with Vite)
 - `quasar mode add electron`
 
-### Additions for sharp
+### Additions/actions for sharp
 
 - `yarn add sharp --ignore-engines` (`--ignore-engines` is recommended for yarn v1)
 - Added sharp test call to `electron-main.js` -> Runs in dev mode, but not as packaged build.
@@ -54,6 +54,9 @@ I tried to follow the advices given on the sharp website (see links below) and t
 ```
 
 `esbuild` and `electron` do not have to be build again, but sharp does?
+
+- Tried on Windows 10, same result as on macOS.
+- Added @electron/rebuild and issued `./node_modules/.bin/electron-rebuild`, immediately results in `✔ Rebuild Complete`. Subsequent `quasar build -m electron` showed same results (sharp build took longer, but nothing else changed).
 
 ## General Info
 

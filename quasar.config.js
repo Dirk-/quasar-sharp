@@ -73,8 +73,8 @@ module.exports = configure(function (/* ctx */) {
           },
           { server: false },
         ],
-      // https://quasar.dev/quasar-cli-vite/handling-vite/#example-rollup-plugin-copy
-    ],
+        // https://quasar.dev/quasar-cli-vite/handling-vite/#example-rollup-plugin-copy
+      ],
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
@@ -202,6 +202,12 @@ module.exports = configure(function (/* ctx */) {
         // buildDependenciesFromSource: true,
         // nodeGypRebuild: true,
       },
+
+      // Putting these options here has no effect either
+      //build: {
+      //  asar: true,
+      //  asarUnpack: ["**/node_modules/sharp/**/*", "**/node_modules/@img/**/*"],
+      //},
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/developing-browser-extensions/configuring-bex
