@@ -57,8 +57,20 @@ I tried to follow the advices given on the sharp website (see links below) and t
 
 - Tried on Windows 10, same result as on macOS.
 - Added @electron/rebuild (see [Native Mode Modules](https://www.electronjs.org/docs/latest/tutorial/using-native-node-modules/)) and issued `./node_modules/.bin/electron-rebuild`, immediately results in `✔ Rebuild Complete`. Subsequent `quasar build -m electron` showed same results (sharp build took longer, but nothing else changed).
+- Added `beforeBuild` to builder options according to [example](https://www.electron.build/api/programmatic-usage.html) -> Binary much smaller, Cannot find module 'sharp'
+- Removed `beforeBuild`.
+- Updated a few packages, including quasar, electron and sharp -> now it works ¯\_(ツ)\_/¯
 
 ## General Info
+
+- Copy `icon.png` to your home folder. It will be converted and saved as `iconSharp.png` by sharp.
+- Log will be written to:
+
+  on Linux: `~/. config/QuasarSharp/logs/main.log`
+
+  on macOS: `~/Library/Logs/QuasarSharp/main.log`
+
+  on Windows: `%USERPROFILE%\AppData\Roaming\{app name}\logs\main.log`
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 

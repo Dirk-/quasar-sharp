@@ -9,6 +9,7 @@
 // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js
 
 const { configure } = require("quasar/wrappers");
+// const { rebuild } = require("@electron/rebuild");
 
 module.exports = configure(function (/* ctx */) {
   return {
@@ -201,6 +202,22 @@ module.exports = configure(function (/* ctx */) {
 
         // buildDependenciesFromSource: true,
         // nodeGypRebuild: true,
+
+        // force arch build if using electron-rebuild (https://www.electron.build/api/programmatic-usage.html)
+        /*
+        beforeBuild: async (context) => {
+          const { appDir, electronVersion, arch } = context;
+          console.log("---- beforeBuild ---- ", appDir, electronVersion, arch);
+          await rebuild({
+            buildPath: appDir,
+            electronVersion,
+            arch,
+          });
+          return false;
+        },
+        nodeGypRebuild: false,
+        buildDependenciesFromSource: false,
+        */
       },
 
       // Putting these options here has no effect either

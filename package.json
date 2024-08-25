@@ -2,7 +2,7 @@
   "name": "quasar-sharp",
   "version": "0.0.1",
   "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "productName": "QuasarSharp",
   "author": "Dirk Fröhling <dirk.froehling@w-hs.de>",
   "private": true,
   "scripts": {
@@ -13,19 +13,19 @@
     "build": "quasar build -m electron"
   },
   "dependencies": {
-    "@quasar/extras": "^1.16.4",
-    "electron-log": "^5.1.5",
-    "quasar": "^2.16.0",
-    "sharp": "^0.33.4",
-    "vue": "^3.4.18",
+    "@quasar/extras": "^1.16.12",
+    "electron-log": "^5.1.7",
+    "quasar": "^2.16.9",
+    "sharp": "^0.33.5",
+    "vue": "^3.4.38",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@electron/packager": "^18.3.2",
+    "@electron/packager": "^18.3.4",
     "@electron/rebuild": "^3.6.0",
-    "@quasar/app-vite": "^1.9.0",
+    "@quasar/app-vite": "^1.9.5",
     "autoprefixer": "^10.4.2",
-    "electron": "^31.0.2",
+    "electron": "^31.4.0",
     "electron-builder": "^24.13.3",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^8.1.0",
